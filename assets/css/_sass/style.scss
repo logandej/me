@@ -224,8 +224,7 @@ section {
   //             linear-gradient(to right, rgb(139, 76, 0), rgb(57, 2, 97)) border-box;
 
   border-radius: 2em;
-  border: 0px solid white;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+  border: 2px solid white;
   //border-radius: 10px;
   //background-color: $projectbox2;
 }
@@ -261,6 +260,71 @@ section h2{
     width: 100%;
     background: rgba(255,255,255,0.1);
     border: 0px solid rgba(255,255,255,0.85);
+    padding: 2.2rem;
+    border-radius: 50px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.45);
+    backdrop-filter: blur(8px);
+    color: $text-color;
+    text-align: left;
+
+    
+  }
+
+  /* avatar placé sur la droite de la bannière (optionnel) */
+  .bandeau__avatar {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 0px solid rgba(255,255,255,0.95);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+    z-index: 3;
+
+    @include media-query($on-palm) {
+      width: 80px;
+      height: 80px;
+      right: 4%;
+      bottom: 4%;
+    }
+  }
+
+  /* Liste d'icônes sous le texte d'intro */
+  .bandeau-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+  }
+
+  .bandeau-icons li {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+
+  }
+
+  .bandeau-icons img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+    transition: transform 160ms ease, opacity 160ms ease;
+    background: rgba(255,255,255,0.03);
+    padding: 20px;
+  }
+
+  .bandeau-icons img:hover {
+    transform: translateY(-4px) scale(1.04);
+    opacity: 0.98;
+  }
+ }
+
+/* Navigation bar styles */
+.topnav {
   display: flex;
   justify-content: space-between;
   align-items: center;
