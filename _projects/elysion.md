@@ -3,7 +3,7 @@ title: "Elysion"
 layout: project
 permalink: /projects/elysion/
 published: true
-date: 2022-09-01
+date: 2022-09-01 12:00:00
 categorie: univ
 description: "Jeu vidéo réalisé en équipe de 3. Jeu d'aventure, d'énigme et de combat."
 context: |
