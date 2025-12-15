@@ -1,7 +1,7 @@
 ### your site title here
 
 title: Logan DE JESUS
-description: subtitle | affiliations | motto
+description: Développeur de jeux vidéos | Programmeur | Chef de Projet | Développement Réalité Virtuelle
 
 baseurl: /me #name of GitHub repository
 url: "https://logandej.github.io" #custom url to be used instead of GitHub repository
@@ -48,13 +48,8 @@ collections:
   projects:
     output: true
     permalink: /projects/:name/
-    order:
-      - shortProject.md
-      - longerProjectTitle.md
-      - redirect.md
-      - project4.md
-      - project5.md
-      - project6.md
+    
+
 
 sass:
   sass_dir: /assets/css/_sass

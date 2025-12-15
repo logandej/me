@@ -1,0 +1,87 @@
+---
+layout: default
+---
+
+<article class="project-page">
+  <header class="project-header">
+    <h1>{{ page.title }}</h1>
+    <p class="project-meta">Publié le {{ page.date | date: "%d %B %Y" }} — <em>{{ page.categorie }}</em></p>
+    {% if page.description %}
+      <p class="project-description">{{ page.description }}</p>
+    {% endif %}
+  </header>
+
+  <section>
+    <h2>Contexte</h2>
+    <div>{{ page.context | markdownify }}</div>
+  </section>
+
+  <section>
+    <h2>Histoire</h2>
+    <div>{{ page.histoire | markdownify }}</div>
+  </section>
+
+  {% if page.images %}
+  <section class="project-gallery">
+    <h2>Images</h2>
+    
+    <div class="project-carousel" id="carousel" aria-roledescription="carousel">
+      <div class="row">
+        <button class="carousel-btn prev" aria-label="Image précédente">‹</button>
+        <div class="carousel-viewport">
+        <ul class="carousel-track">
+            {% for img in page.images %}
+            <li class="carousel-slide" data-index="{{ forloop.index0 }}">
+                <img data-src="{{ img | relative_url }}" alt="{{ page.title }} - image {{ forloop.index }}" loading="lazy">
+            </li>
+            {% endfor %}
+        </ul>
+        </div>
+        <button class="carousel-btn next" aria-label="Image suivante">›</button>
+      </div>
+      <div class="carousel-indicators">
+        {% for img in page.images %}
+          <button class="indicator" data-index="{{ forloop.index0 }}" aria-label="Aller à l'image {{ forloop.index }}"></button>
+        {% endfor %}
+      </div>
+    </div>
+
+  </section>
+  {% endif %}
+
+  {% if page.videos %}
+  <section>
+    <h2>Vidéos</h2>
+    {% for v in page.videos %}
+      <div class="video-wrapper">
+        {% assign embed = v | replace: 'watch?v=', 'embed/' %}
+        <iframe src="{{ embed }}" frameborder="0" allowfullscreen></iframe>
+      </div>
+    {% endfor %}
+  </section>
+  {% endif %}
+
+  {% if page.notes %}
+  <section>
+    <h2>Notes techniques</h2>
+    <div>{{ page.notes | markdownify }}</div>
+  </section>
+  {% endif %}
+
+  {% if page.credits %}
+  <section>
+    <h2>Crédits</h2>
+    <ul>
+      {% for c in page.credits %}
+        <li>{{ c }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if page.redirect %}
+  <p class="project-link">Lien externe : <a href="{{ page.redirect }}" target="_blank">{{ page.redirect }}</a></p>
+  {% endif %}
+</article>
+
+<script src="{{ '/assets/js/project-carousel.js' | relative_url }}" defer></script>

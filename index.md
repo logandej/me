@@ -3,21 +3,72 @@ layout: about
 permalink: /
 profile:
   align: right
-  image: pp.png
+  image: profile.jpg
 published: true
 ---
 
-[Logan DE JESUS.](https://github.com/jitinnair1/gradfolio){:target="_blank"} Je suis leé gros caca meilleur developpeur du monde ! J ai vecu 3 ans a Toulon et j adore ma vie d ingenieur en 
 
-informatique et multimedia ! Ma passion ? Developper des jeux videos, de plus en plus fous ! The easiest way to install the theme is to fork it using GitHub. Check the README file for [instructions](https://github.com/jitinnair1/gradfolio#installation){:target="_blank"}.
+<div class="bandeau">
+  <img class="bandeau__avatar" src="{{ page.profile.image | prepend: '/assets/images/' | relative_url }}">
+  <div id="blur">
+    <h1 class="bandeau-name">{{ site.name | default: "Logan De Jesus" }}</h1>
+    <div class="bandeau-desc">{{ site.description | default: "pb" }}</div>
 
-If you want to use this space to write your biography here, edit the `index.md` file. You can put a picture in, too. Rename your picture to `profile.png` and put it in the `assets/images/` folder.
+    <p class="bandeau-intro">
+      Je m'appelle {{ site.name | default: "Logan" }}. Après avoir passé <strong>2 ans d'IUT à Montpellier</strong> et <strong>3 ans de formation au CNAM en ingénieur informatique et multimédia à Toulon</strong>, je suis maintenant diplômé et je suis devenu professionnel dans la création de jeux vidéo, notamment en réalité virtuelle.
+    </p>
 
-The social-icons footer can be used to link profiles from GitHub, OrcID and ReasearchGate aprart form the usual Twitter, LinkedIn and Facebook. You can add your user ID in the `_config.yml` file to link your accounts.
+    <ul class="bandeau-icons" aria-label="Icônes de profil">
+      {% assign icons = site.static_files | where_exp: "f", "f.path contains 'assets/images/profileicons/'" | sort: "name" %}
+      {% for icon in icons %}
+        <li>
+            <img src="{{ icon.path | relative_url }}" alt="{{ icon.name }}" loading="lazy" />
+        </li>
+      {% endfor %}
 
-PS: If you liked the theme, do star it on GitHub!
+    </ul>
+  </div>
 
-### Also, check out:
 
-- [autoCV](https://github.com/jitinnair1/autocv) - a LaTeX template that builds and deploys the CV using GitHub Actions, so you will always have a ready link for your latest CV
-- [Tail](https://github.com/jitinnair1/tail) - a minimal, quick-setup template for a blog
+</div>
+
+<section>
+	<h2>Mon Histoire</h2>
+		<div>
+			<ul>
+			<li>2025 — Diplômé, CDD 6 Mois au CNAM en tant qu'ingénieur développeur et Chef de projet XR</li>
+			<li>2022–2025 — Formation d'ingénieur au CNAM en alternance (informatique & multimédia)</li>
+			<li>2020–2022 — Études à l'IUT de Montpellier (informatique)</li>
+		</ul>
+		<p>J'aime concevoir des expériences immersives, prototyper rapidement et travailler en équipe pour mener un projet de l'idée au produit fini.</p>
+		</div>
+</section>
+
+<section>
+	<h2>Compétences Techniques</h2>
+		<div>
+			<ul>
+			<li>Langages : C#, Python, Java, C, HTML/CSS, JavaScript</li>
+			<li>Moteurs : Unity (C#), Unreal Engine (Blueprints)</li>
+			<li>Outils : Git, Blender, Visual Studio, JIRA</li>
+			<li>Spécialisations : Réalité Virtuelle (VR), Graphismes Temps Réel, Prototypage Rapide, Design de Jeux</li>
+		</ul>
+		</div>
+</section>
+
+
+<section>
+	<h2>Infos Rapides</h2>
+		<div>
+			<ul>
+			<li>Localisation : Montpellier, Toulon, où je veux !</li>
+			<li>Domaines : Jeux vidéo, Réalité virtuelle</li>
+			<li>Statut : Disponible pour collaborations et missions</li>
+		</ul>
+		</div>
+</section>
+
+<section>
+<h2> Projets & Contact </h2>
+<p>Parcourez la section <a href="{{site.baseurl}}/Projects"> Projets </a> pour voir mes réalisations, et le <a href="{{site.baseurl}}/blogs">Blog</a> pour mes notes techniques et post-mortems. Si vous souhaitez me contacter ou collaborer, utilisez les liens en bas de page.</p>
+

@@ -26,6 +26,12 @@
   display: table;
 }
 
+#univ {
+
+  background: $projectbox2;
+ 
+}
+
 .projectTile a {
   display: table-cell;
   vertical-align: middle;
@@ -90,7 +96,7 @@
     }
 
     .projectTile a span h2 {
-      font-size: 1.3rem;
+      font-size: 1.0rem;
     }
 
     .projectTile:hover a span p {

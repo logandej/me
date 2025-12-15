@@ -1,18 +1,26 @@
 html, body {
   height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
 }
 
 body {
   max-width: $content-width;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
   font-family: $base-font-family;
-  margin: 0 auto;
   line-height: $base-line-height;
   font-size: $base-font-size;
   color: $text-color;
-  background-color: $body-bg;
-  padding: 2em 1em;
+  //background-color: $body-bg;
+  background-image: url("../images/testback.png");
+  background-size: cover;
+  // padding: 2em 1em;
   text-rendering: optimizeLegibility;
-  height: 100%;
 
   @media (prefers-color-scheme: dark) {
     background-color: $body-bg-dark;
@@ -158,7 +166,7 @@ blockquote {
 
 /* Horizontal Divider */
 .divider {
-  margin: 1em;
+  margin: 0;
 }
 
 /* Horizontal scrolling navbar. From: https://iamsteve.me/blog/horizontal-scrolling-responsive-menu */
@@ -183,7 +191,7 @@ blockquote {
   line-height: 20px;
   font-weight: 600;
   border-radius: 8px;
-  padding: 13px 23px;
+  /*padding: 10px 23px;*/
   border: 1px solid #222222;
   transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
   background: #fff;
@@ -199,4 +207,64 @@ blockquote {
   margin: 1em 0;
 }
 
+$accent-1: #6c5ce7; // purple
+$accent-2: #00b894; // green
+
+.project-content {
+  color: #dbe7f7;
+  line-height: 1.6;
+}
+
+section {
+  margin: 20px;
+  padding: 20px;
+  background: rgba(255,255,255,0.05);
+  
+  // background: linear-gradient(rgb(40, 2, 88), rgb(53, 11, 71)) padding-box,
+  //             linear-gradient(to right, rgb(139, 76, 0), rgb(57, 2, 97)) border-box;
+
+  border-radius: 2em;
+  border: 0px solid white;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+  //border-radius: 10px;
+  //background-color: $projectbox2;
+}
+
+section h2{
+  margin-top: 0;
+  color: $accent-1;
+}
+
+.bandeau {
+  min-height: 90vh;
+  /* Chemin relatif depuis assets/css/style.css compilé vers assets/images/... */
+  background-image: url("../images/testback.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+
+  /* full-bleed layout */
+ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+
+  /* cadre central flouté */
+  #blur {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    width: 100%;
+    background: rgba(255,255,255,0.1);
+    border: 0px solid rgba(255,255,255,0.85);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
 

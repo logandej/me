@@ -6,10 +6,10 @@
 @charset "utf-8";
 
 // Width of the content area
-$content-width:    800px;
-$on-phone:         450px;
-$on-palm:          660px;
-$on-laptop:        1000px;
+$content-width:    100%;
+$on-phone:         80%;
+$on-palm:          80%;
+$on-laptop:        70%;
 
 @mixin media-query($device) {
     @media screen and (max-width: $device) {
@@ -31,3 +31,4 @@ $on-laptop:        1000px;
 @import 'style';
 @import 'google-fonts';
 @import 'syntax-highlighting';
+@import "_sass/project-custom.scss";
