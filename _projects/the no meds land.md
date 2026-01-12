@@ -24,7 +24,7 @@ credits:
   - "Logan DE JESUS - Développeur, Game Designer, Level Designer"
   - "Maëlis RAKOWSKI - Développeur, Chef de projet, Scénariste"
   - "Nellou MICHEL - Développeur, 3D Artist"
-  - "Louis Seingobos - Développeur, dialogues creator, playtester"
+  - "Louis SEIGNOBOS - Développeur, dialogues creator, playtester"
   - "Quentin ARZALIER - Développeur, Gestion des Assets"
   - "Mathis RICHARD - Développeur, UI Designer"
   - "Raphaël ROUX - Gestion de projet"
