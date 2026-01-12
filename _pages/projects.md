@@ -7,7 +7,7 @@ published: true
 
 <div class="ProjectContainer">
 
-  {% assign categories = "pro,univ" | split: "," %}
+  {% assign categories = "professionnel,universitaire,personnel" | split: "," %}
 
   {% for cat in categories %}
 
@@ -17,7 +17,7 @@ published: true
       
       {% for project in projects %}
 
-        <div class="projectTile" {% if cat == "univ" %}id="univ"{% endif %}>
+        <div class="projectTile" {% if cat == "universitaire" %}id="universitaire"{% endif %}>
 
           {% assign link = project.redirect | default: project.url | prepend: site.baseurl | prepend: site.url %}
 

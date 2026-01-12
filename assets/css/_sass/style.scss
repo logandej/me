@@ -215,18 +215,28 @@ $accent-2: #00b894; // green
   line-height: 1.6;
 }
 
-section {
-  margin: 20px;
-  padding: 20px;
-  background: rgba(255,255,255,0.05);
-  
-  // background: linear-gradient(rgb(40, 2, 88), rgb(53, 11, 71)) padding-box,
-  //             linear-gradient(to right, rgb(139, 76, 0), rgb(57, 2, 97)) border-box;
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
 
-  border-radius: 2em;
-  border: 2px solid white;
-  //border-radius: 10px;
-  //background-color: $projectbox2;
+section {
+  z-index: 2;
+  margin: auto;
+  margin-bottom: 4rem;
+  max-width: 80%;
+  width: 40%;
+  height: auto;
+  background: rgba(255,255,255,0.1);
+  border: 0px solid rgba(255,255,255,0.85);
+  padding: 2.2rem;
+  border-radius: 50px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.45);
+  backdrop-filter: blur(8px);
+  color: $text-color;
+  text-align: left;
 }
 
 section h2{

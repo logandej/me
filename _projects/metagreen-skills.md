@@ -1,11 +1,11 @@
 ---
-title: "Elysion"
+title: "Meta Green Skills"
 layout: project
-permalink: /projects/elysion/
+permalink: /projects/metagreen-skills/
 published: true
-date: 2022-09-01 12:00:00
-categorie: universitaire
-description: "Jeu vidéo réalisé en équipe de 3. Jeu d'aventure, d'énigme et de combat."
+date: 2024-01-01
+categorie: professionnel
+description: "Jeu vidéo multijoueur dans un métavers sur les softs skills et le développement durable"
 context: |
   Jeu vidéo réalisé dans le cadre de cours sur pour apprendre Unity, enseigné par Alain Cardona, en première année de formation Ingénieur en Informatique et Multimdédia au Cnam PACA.
 histoire: |

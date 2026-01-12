@@ -5,60 +5,68 @@ layout: default
 <article class="project-page">
   <header class="project-header">
     <h1>{{ page.title }}</h1>
-    <p class="project-meta">Publié le {{ page.date | date: "%d %B %Y" }} — <em>{{ page.categorie }}</em></p>
+
+      <p class="project-meta"> {{ page.date | date: "%d %B %Y" }} — <em>{{ page.categorie }}</em></p>
     {% if page.description %}
       <p class="project-description">{{ page.description }}</p>
-    {% endif %}
+    {% endif %}   
   </header>
 
-  <section>
-    <h2>Contexte</h2>
-    <div>{{ page.context | markdownify }}</div>
-  </section>
+  <div class="flex-container">
+    <section>
+      <h2>Contexte</h2>
+      <div>{{ page.context | markdownify }}</div>
+    </section>
 
-  <section>
-    <h2>Histoire</h2>
-    <div>{{ page.histoire | markdownify }}</div>
-  </section>
+  
 
-  {% if page.images %}
-  <section class="project-gallery">
-    <h2>Images</h2>
-    
-    <div class="project-carousel" id="carousel" aria-roledescription="carousel">
-      <div class="row">
-        <button class="carousel-btn prev" aria-label="Image précédente">‹</button>
-        <div class="carousel-viewport">
-        <ul class="carousel-track">
-            {% for img in page.images %}
-            <li class="carousel-slide" data-index="{{ forloop.index0 }}">
-                <img data-src="{{ img | relative_url }}" alt="{{ page.title }} - image {{ forloop.index }}" loading="lazy">
+
+{% assign all_media = page.videos | concat: page.images %}
+{% if all_media.size > 0 %}
+<section class="project-gallery">  
+  <div class="project-carousel" id="carousel" role="region" aria-label="Galerie multimédia">
+    <div class="row">
+      <button class="carousel-btn prev" aria-label="Média précédent" aria-controls="carousel-track">‹</button>
+      <div class="carousel-viewport" aria-live="polite">
+        <ul class="carousel-track" id="carousel-track">
+          {% if page.videos %}
+            {% for video in page.videos %}
+            <li class="carousel-slide{% if forloop.first and page.videos %} active{% endif %}" data-index="{{ forloop.index0 }}" role="group" aria-label="Vidéo {{ forloop.index }}">
+              <div class="video-wrapper">
+                {% assign embed = video | replace: 'watch?v=', 'embed/' %}
+                <iframe src="{{ embed }}" frameborder="0" allowfullscreen></iframe>
+              </div>
             </li>
             {% endfor %}
+          {% endif %}
+          
+          {% if page.images %}
+            {% for img in page.images %}
+            {% assign slide_index = forloop.index0 | plus: page.videos.size %}
+            <li class="carousel-slide{% if forloop.first and page.videos.size == 0 %} active{% endif %}" data-index="{{ slide_index }}" role="group" aria-label="Image {{ forloop.index }}">
+              <img src="{{ img | relative_url }}" alt="{{ page.title }} - image {{ forloop.index }}">
+            </li>
+            {% endfor %}
+          {% endif %}
         </ul>
-        </div>
-        <button class="carousel-btn next" aria-label="Image suivante">›</button>
       </div>
-      <div class="carousel-indicators">
-        {% for img in page.images %}
-          <button class="indicator" data-index="{{ forloop.index0 }}" aria-label="Aller à l'image {{ forloop.index }}"></button>
-        {% endfor %}
-      </div>
+      <button class="carousel-btn next" aria-label="Média suivant" aria-controls="carousel-track">›</button>
     </div>
+    <div class="carousel-indicators" role="tablist">
+      {% assign total_media = page.videos.size | plus: page.images.size %}
+      {% for i in (1..total_media) %}
+      <button class="indicator{% if forloop.first %} active{% endif %}" data-index="{{ forloop.index0 }}" role="tab" aria-label="Aller au média {{ forloop.index }}" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"></button>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
 
-  </section>
-  {% endif %}
-
-  {% if page.videos %}
+  {% if page.histoire %}
   <section>
-    <h2>Vidéos</h2>
-    {% for v in page.videos %}
-      <div class="video-wrapper">
-        {% assign embed = v | replace: 'watch?v=', 'embed/' %}
-        <iframe src="{{ embed }}" frameborder="0" allowfullscreen></iframe>
-      </div>
-    {% endfor %}
-  </section>
+      <h2>Histoire</h2>
+      <div>{{ page.histoire | markdownify }}</div>
+    </section>
   {% endif %}
 
   {% if page.notes %}
@@ -82,6 +90,9 @@ layout: default
   {% if page.redirect %}
   <p class="project-link">Lien externe : <a href="{{ page.redirect }}" target="_blank">{{ page.redirect }}</a></p>
   {% endif %}
+
+  </div>
 </article>
 
-<script src="{{ '/assets/js/project-carousel.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/project-carousel.js' | relative_url }}"></script>
+

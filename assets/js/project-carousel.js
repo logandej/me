@@ -1,64 +1,90 @@
-// Simple accessible carousel with lazy-loading
-(function(){
-  'use strict';
-  const root = document.documentElement;
-  document.addEventListener('DOMContentLoaded', () => {
-    const carousels = document.querySelectorAll('.project-carousel');
-    carousels.forEach(initCarousel);
-  });
+// === CAROUSEL JAVASCRIPT ===
 
-  function initCarousel(container){
-    const track = container.querySelector('.carousel-track');
-    const slides = Array.from(track.children);
-    const prev = container.querySelector('.carousel-btn.prev');
-    const next = container.querySelector('.carousel-btn.next');
-    const indicators = Array.from(container.querySelectorAll('.indicator'));
-    const viewport = container.querySelector('.carousel-viewport');
-
-    let current = 0;
-    const slideWidth = () => slides[0] ? slides[0].getBoundingClientRect().width : 0;
-
-    // set slides position
-    function layout(){
-      const w = slideWidth();
-      slides.forEach((s,i) => s.style.transform = `translateX(${i * w}px)`);
-    }
-
-    // lazy load current and neighbours
-    function lazyLoad(index){
-      [index-1, index, index+1].forEach(i => {
-        if(i >=0 && i < slides.length){
-          const img = slides[i].querySelector('img');
-          if(img && img.dataset.src && !img.src){ img.src = img.dataset.src; }
-        }
-      });
-    }
-
-    function goTo(index){
-      current = Math.max(0, Math.min(index, slides.length-1));
-      const w = slideWidth()*2;
-      track.style.transform = `translateX(${-current * w}px)`;
-      indicators.forEach((b,i) => b.classList.toggle('active', i === current));
-      lazyLoad(current);
-    }
-
-    // events
-    prev.addEventListener('click', () => goTo(current-1));
-    next.addEventListener('click', () => goTo(current+1));
-    indicators.forEach((b) => b.addEventListener('click', e => goTo(Number(e.currentTarget.dataset.index))));
-
-    // swipe support
-    let startX = 0;
-    let isDown = false;
-    viewport.addEventListener('pointerdown', (e)=>{ isDown=true; startX=e.clientX; viewport.setPointerCapture(e.pointerId); });
-    viewport.addEventListener('pointerup', (e)=>{ if(!isDown) return; isDown=false; const dx = e.clientX - startX; if(dx>30) goTo(current-1); else if(dx < -30) goTo(current+1); });
-
-    // resize
-    window.addEventListener('resize', layout);
-
-    // init
-    layout();
-    lazyLoad(0);
-    goTo(0);
+document.addEventListener('DOMContentLoaded', function() {
+  const carousel = document.getElementById('carousel');
+  
+  // Vérifier si le carousel existe sur la page
+  if (!carousel) return;
+  
+  const track = carousel.querySelector('.carousel-track');
+  const slides = Array.from(track.querySelectorAll('.carousel-slide'));
+  const prevBtn = carousel.querySelector('.carousel-btn.prev');
+  const nextBtn = carousel.querySelector('.carousel-btn.next');
+  const indicators = Array.from(carousel.querySelector('.carousel-indicators').children);
+  
+  let currentIndex = 0;
+  
+  // Fonction pour afficher un slide spécifique
+  function goToSlide(index) {
+    // Retirer la classe active de tous les slides
+    slides.forEach(slide => slide.classList.remove('active'));
+    indicators.forEach(indicator => {
+      indicator.classList.remove('active');
+      indicator.setAttribute('aria-selected', 'false');
+    });
+    
+    // Ajouter la classe active au slide actuel
+    slides[index].classList.add('active');
+    indicators[index].classList.add('active');
+    indicators[index].setAttribute('aria-selected', 'true');
+    
+    currentIndex = index;
   }
-})();
+  
+  // Bouton précédent
+  prevBtn.addEventListener('click', function() {
+    const newIndex = currentIndex === 0 ? slides.length - 1 : currentIndex - 1;
+    goToSlide(newIndex);
+  });
+  
+  // Bouton suivant
+  nextBtn.addEventListener('click', function() {
+    const newIndex = currentIndex === slides.length - 1 ? 0 : currentIndex + 1;
+    goToSlide(newIndex);
+  });
+  
+  // Indicateurs cliquables
+  indicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', function() {
+      goToSlide(index);
+    });
+  });
+  
+  // Navigation au clavier (optionnel mais recommandé pour l'accessibilité)
+  carousel.addEventListener('keydown', function(e) {
+    if (e.key === 'ArrowLeft') {
+      prevBtn.click();
+    } else if (e.key === 'ArrowRight') {
+      nextBtn.click();
+    }
+  });
+  
+  // Auto-play optionnel (décommente si tu veux)
+  /*
+  let autoplayInterval;
+  
+  function startAutoplay() {
+    autoplayInterval = setInterval(() => {
+      nextBtn.click();
+    }, 5000); // Change d'image toutes les 5 secondes
+  }
+  
+  function stopAutoplay() {
+    clearInterval(autoplayInterval);
+  }
+  
+  // Démarrer l'autoplay
+  startAutoplay();
+  
+  // Arrêter l'autoplay au hover
+  carousel.addEventListener('mouseenter', stopAutoplay);
+  carousel.addEventListener('mouseleave', startAutoplay);
+  
+  // Arrêter l'autoplay lors de l'interaction
+  prevBtn.addEventListener('click', stopAutoplay);
+  nextBtn.addEventListener('click', stopAutoplay);
+  indicators.forEach(indicator => {
+    indicator.addEventListener('click', stopAutoplay);
+  });
+  */
+});
