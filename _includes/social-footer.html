@@ -89,5 +89,23 @@ target="_blank">
 </a>
 {%- endif -%}
 
+{%- if site.itchio -%}
+<a title="{{ _locale_string_follow | replace: '[NAME]', 'Itchio' }}"
+class="social-button itchio" itemprop="sameAs"
+href="https://{{ site.itchio }}.itch.io"
+target="_blank">
+<i class="fab fa-itch-io"></i>
+</a>
+{%- endif -%}
+
+{%- if site.youtube -%}
+<a title="{{ _locale_string_follow | replace: '[NAME]', 'YouTube' }}"
+class="social-button youtube" itemprop="sameAs"
+href="https://www.youtube.com/@{{ site.youtube }}"
+target="_blank">
+<i class="fab fa-youtube"></i>
+</a>
+{%- endif -%}
+
 
 </div>

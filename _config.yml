@@ -13,15 +13,18 @@ permalink: /blog/:year/:title/
 paginate_path: /blog/page:num/
 
 # Social media links in footer
-linkedin: "#"
-stackoverflow: "#"
-github: "#"
-researchgate: "#"
-orcid: "#"
-quora: "#"
-instagram: "#"
-facebook: "#"
-bluesky: "#"
+linkedin: "logan-de-jesus-606b0a172"
+# stackoverflow: "#"
+github: "logandej"
+
+itchio: "logandej"
+youtube: "LoganDJS/videos"
+# researchgate: "#"
+# orcid: "#"
+# quora: "#"
+# instagram: "#"
+# facebook: "#"
+# bluesky: "#"
 
 # Markdown
 highlighter: rouge
@@ -61,6 +64,11 @@ defaults:
       path: "_projects/universitaires"
     values:
       categorie: universitaire
+
+  - scope:
+      path: "_projects/gamejams"
+    values:
+      categorie: gamejam
 
 
 collections:

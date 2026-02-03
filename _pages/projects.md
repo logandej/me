@@ -7,10 +7,10 @@ published: true
 
 <div class="ProjectContainer">
 
-{% assign categories_list = "universitaire,professionnel,personnel" | split: "," %}
-{% assign categories_labels = "Projets Universitaires,Projets Professionnels,Projets Personnels" | split: "," %}
+{% assign categories_list = "universitaire,professionnel,personnel,gamejam" | split: "," %}
+{% assign categories_labels = "Projets Universitaires,Projets Professionnels,Projets Personnels,Game Jams" | split: "," %}
 
-{% for i in (0..2) %}
+{% for i in (0..3) %}
   {% assign cat_key = categories_list[i] %}
   {% assign cat_label = categories_labels[i] %}
   
@@ -23,8 +23,11 @@ published: true
     {% if projects.size > 0 %}
       {% for project in projects %}
         <div class="projectTile" {% if cat_key == "universitaire" %}id="universitaire"{% endif %} style="background-image: url('{{ site.baseurl }}{{ project.projectTileBgImg }}')">
-
-          {% assign link = project.redirect | default: project.url | prepend: site.baseurl | prepend: site.url %}
+          {% if project.redirect %}
+              {% assign link = project.redirect %}
+            {% else %}
+              {% assign link = project.url | prepend: site.baseurl | prepend: site.url %}
+            {% endif %}
 
           <a href="{{ link }}" {% if project.redirect %}target="_blank"{% endif %}>
             <span>
