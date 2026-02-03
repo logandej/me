@@ -1,27 +1,33 @@
 ---
-title: "Meta Green Skills"
+title: "Woogus"
 layout: project
-permalink: /projects/metagreen-skills/
+permalink: /projects/Woogus/
 published: true
-date: 2024-01-01
-description: "Jeu vidéo multijoueur dans un métavers sur les softs skills et le développement durable"
+date: 2022-09-01 12:00:00
+description: "Jeu vidéo réalisé en équipe de 3. Jeu d'aventure, d'énigme et de combat."
 context: |
-  Jeu vidéo réalisé dans le cadre de l'appel à projet "Citoyenneté Européenne" lancé par la Région Sud
+  Jeu vidéo réalisé dans le cadre de cours sur pour apprendre Unity, enseigné par Alain Cardona, en première année de formation Ingénieur en Informatique et Multimdédia au Cnam PACA.
 histoire: |
   Suite à une invasion étrangère, la planète Elysion subit de gros dégâts. Une seule personne arrive à survivre et on la retrouve 15 ans plus tard. Vous incarnez un personnage soif de vengeance qui va explorer, combattre et résoudre des énigmes avec un concept inédit : déplacer et orienter les structures qui vous entourent pour vous frayer un chemin vers la vérité.
 notes: |
-  Infos techniques :
   - Moteur : Unity
   - Jouabilité : Clavier / Souris
   - Développement & compétences acquises : Level Design (outil Landscape), gestion des animateurs de personnages, travail en équipe avec Git (collaboration), système d'énigme/puzzle avec matrices, cinématiques, storytelling.
 
-projectTileBgImg: /assets/images/metagreen/metagreen-low.png
+
+infos : |
+ Ceci est des infos supplémentaires sur le déroulé etc.   - Jouabilité : Clavier / Souris
+  - Développement & compétences acquises : Level Design (outil Landscape), gestion des animateurs de personnages, travail en équipe avec Git (collaboration), système d'énigme/puzzle avec matrices, cinématiques, storytelling.
+
+
+projectTileBgImg: /assets/images/woogus/woogus-low.png
 images:
   - /assets/images/elysion/1.png
   - /assets/images/elysion/2.png
   - /assets/images/elysion/10.png
 videos:
-  - https://www.youtube.com/watch?v=KkWSkp5ZSf4
+  - https://www.youtube.com/watch?v=qaCSMvxSkWo
+projectVideoUrl :  /assets/videos/elysion1.mp4
 credits:
   - "Équipe"
   - "Logan DE JESUS — Développeur, Game Designer, Level Designer"

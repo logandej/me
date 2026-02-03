@@ -7,8 +7,8 @@ published: true
 
 <div class="ProjectContainer">
 
-{% assign categories_list = "universitaire,professionnel,personnel,gamejam" | split: "," %}
-{% assign categories_labels = "Projets Universitaires,Projets Professionnels,Projets Personnels,Game Jams" | split: "," %}
+{% assign categories_list = "professionnel,universitaire,personnel,gamejam" | split: "," %}
+{% assign categories_labels = "Projets Professionnels,Projets Universitaires,Projets Personnels,Game Jams" | split: "," %}
 
 {% for i in (0..3) %}
   {% assign cat_key = categories_list[i] %}
@@ -18,11 +18,11 @@ published: true
 
   <div class="gallery">
     
-    {% assign projects = site.projects | where: "categorie", cat_key %}
+    {% assign projects = site.projects | where: "categorie", cat_key | reverse %}
     
     {% if projects.size > 0 %}
       {% for project in projects %}
-        <div class="projectTile" {% if cat_key == "universitaire" %}id="universitaire"{% endif %} style="background-image: url('{{ site.baseurl }}{{ project.projectTileBgImg }}')">
+        <div class="projectTile" {% if cat_key == "professionnel" %}id="professionnel"{% endif %} style="--bg-img: url('{{ site.baseurl }}{{ project.projectTileBgImg }}');">
           {% if project.redirect %}
               {% assign link = project.redirect %}
             {% else %}
