@@ -6,25 +6,27 @@ published: true
 date: 2024-01-01
 description: "Jeu vidéo multijoueur dans un métavers sur les softs skills et le développement durable"
 context: |
-  Jeu vidéo réalisé dans le cadre de l'appel à projet "Citoyenneté Européenne" lancé par la Région Sud
+  Jeu vidéo multijoueur réalisé dans le cadre de l'appel à projet "Citoyenneté Européenne" lancé par la Région Sud. Création d'une expérience interactive pour mobiliser, fédérer et collaborer à distance via un Escape Game, sur des enjeux écologiques, en développant des compétences transversales.
 histoire: |
-  Suite à une invasion étrangère, la planète Elysion subit de gros dégâts. Une seule personne arrive à survivre et on la retrouve 15 ans plus tard. Vous incarnez un personnage soif de vengeance qui va explorer, combattre et résoudre des énigmes avec un concept inédit : déplacer et orienter les structures qui vous entourent pour vous frayer un chemin vers la vérité.
+  Vous êtes des nouvelles recrues de l’entreprise EcoCorp et avez été choisi pour une mission cruciale:
+  sauver notre planète, ravagée par la pollution et la dégradation de l'environnement. Votre objectif est clair :
+  Collaborer pour construire futur meilleur et écologique. Transformez ce monde pollué en un paradis éco-responsable.
+
 notes: |
   Infos techniques :
-  - Moteur : Unity
-  - Jouabilité : Clavier / Souris
-  - Développement & compétences acquises : Level Design (outil Landscape), gestion des animateurs de personnages, travail en équipe avec Git (collaboration), système d'énigme/puzzle avec matrices, cinématiques, storytelling.
+  - Moteur : Unity / Spatial.io
+  - Jouabilité : Ordinateur, Réalité Virtuelle, 
+
+
+infos: |
+ Pour cette application, je suis parti aux Pays-Bas pour rejoindre notre partenaire pendant 1 mois où j'étais lead developer. Le développement a duré 1 an en étant en contact avec le partenaire.
 
 projectTileBgImg: /assets/images/metagreen/metagreen-low.png
 images:
-  - /assets/images/elysion/1.png
-  - /assets/images/elysion/2.png
-  - /assets/images/elysion/10.png
-videos:
-  - https://www.youtube.com/watch?v=KkWSkp5ZSf4
+ - ""
+
+videos: ""
 credits:
-  - "Équipe"
   - "Logan DE JESUS — Développeur, Game Designer, Level Designer"
-  - "Maëlis RAKOWSKI - Développeur, Chef de projet, Scénariste"
-  - "Nellou MICHEL - Développeur, 3D Artist"
+
 ---

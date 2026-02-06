@@ -10,6 +10,8 @@ published: true
 
 <div class="bandeau">
   <img class="bandeau__avatar" src="{{ page.profile.image | prepend: '/assets/images/' | relative_url }}">
+  <i>Site Web en construction</i>
+
   <div class="section-item">
     <h1 class="bandeau-name">{{ site.name | default: "Logan De Jesus" }}</h1>
     <div class="bandeau-desc">{{ site.description | default: "pb" }}</div>

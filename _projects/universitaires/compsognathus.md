@@ -6,7 +6,7 @@ published: true
 date: 2025-04-01 12:00:00
 description: "Jeu interactif pour le musée d'histoire de Toulon"
 context: |
-  Application Interactive Tout Public développée pour le [Musée d'histoire naturelle de Toulon](https://museum.var.fr/ws/home/app/collection/expo) dans le cadre du cours "Projet Pluridisciplinaire 2".
+  Application Interactive Tout Public développée pour le [Musée d'histoire naturelle de Toulon](https://museum.var.fr/ws/home/app/collection/expo) dans le cadre du cours "Projet Pluridisciplinaire 2" du Cnam.
 
 notes: |
   - Moteur : Unity

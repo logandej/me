@@ -8,7 +8,6 @@ description: "Projet inspiré de TerraTech, construction de véhicules en multij
 context: |
   Build Tech est un projet inspiré du jeu TerraTech : construction de véhicules et déplacement dans un monde stylisé. Contrairement au jeu original, j'ai implémenté le multijoueur à l'aide de Photon Fusion.
 notes: |
-  Détails techniques :
   - Moteur : Unity
   - Jouabilité : Clavier / Souris
   - Multijoueur : Photon Fusion

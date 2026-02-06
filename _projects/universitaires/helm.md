@@ -3,21 +3,19 @@ title: "Gouffre de Helm"
 layout: project
 permalink: /projects/gouffre-de-helm/
 published: true
-date: 2022-09-01 12:00:00
-description: "Jeu vidéo réalisé en équipe de 3. Jeu d'aventure, d'énigme et de combat."
+date: 2023-09-01 12:00:00
+description: "Modelisation 3D sur Blender."
 context: |
-  Jeu vidéo réalisé dans le cadre de cours sur pour apprendre Unity, enseigné par Alain Cardona, en première année de formation Ingénieur en Informatique et Multimdédia au Cnam PACA.
-histoire: |
-  Suite à une invasion étrangère, la planète Elysion subit de gros dégâts. Une seule personne arrive à survivre et on la retrouve 15 ans plus tard. Vous incarnez un personnage soif de vengeance qui va explorer, combattre et résoudre des énigmes avec un concept inédit : déplacer et orienter les structures qui vous entourent pour vous frayer un chemin vers la vérité.
+  Rendu réalisé en 3D après la modélisation du Gouffre de Helm en équipe de 4 pendant les cours 3D sur Blender enseigné par Stéphan Natkin au Cnam
+
 notes: |
-  - Moteur : Unity
-  - Jouabilité : Clavier / Souris
-  - Développement & compétences acquises : Level Design (outil Landscape), gestion des animateurs de personnages, travail en équipe avec Git (collaboration), système d'énigme/puzzle avec matrices, cinématiques, storytelling.
+  - Rendu : Unity
+  - Modelisation : Blender
+
 
 
 infos : |
- Ceci est des infos supplémentaires sur le déroulé etc.   - Jouabilité : Clavier / Souris
-  - Développement & compétences acquises : Level Design (outil Landscape), gestion des animateurs de personnages, travail en équipe avec Git (collaboration), système d'énigme/puzzle avec matrices, cinématiques, storytelling.
+ J'ai beaucoup appris dans ce cours à faire de la modelisation simple sur Blender, Gérer les polygones, ajouter des textures, déplier les UVs de façons automatiques etc... Cours très interessant et important pour comprendre également comment travaillent les Designers 3D dans les équipes de développement de jeu vidéo !
 
 
 projectTileBgImg: /assets/images/helm/helm-low.png
@@ -31,6 +29,5 @@ projectVideoUrl :  /assets/videos/elysion1.mp4
 credits:
   - "Équipe"
   - "Logan DE JESUS — Développeur, Game Designer, Level Designer"
-  - "Maëlis RAKOWSKI - Développeur, Chef de projet, Scénariste"
-  - "Nellou MICHEL - Développeur, 3D Artist"
+
 ---

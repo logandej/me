@@ -7,9 +7,8 @@ layout: default
 
      <!-- Vidéo en arrière-plan -->
     <video class="header-video" autoplay loop muted playsinline>
-      <source src="{{ site.baseurl }}{{ page.projectVideoUrl }}" type="video/mp4">
-      <!-- Fallback sur l'image si la vidéo ne charge pas -->
-      <img src="{{ site.baseurl }}{{ page.projectTileBgImg }}" alt="">
+      <source src="{{ page.projectVideoUrl | relative_url }}" type="video/mp4">
+      <img src="{{ page.projectTileBgImg | relative_url }}" alt="">
     </video>
   
   <!-- Overlay optionnel pour améliorer la lisibilité du texte -->

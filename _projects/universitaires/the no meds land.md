@@ -10,10 +10,12 @@ context: |
 histoire: |
   Nous incarnons un médecin de monde parti en Ukraine avec son équipe pour aider les personnes dans le besoin. 5 histoires racontées et simulées tirées de faits réels en Ukraine pendant les attaques avec la Russie.
 notes: |
-  Infos techniques :
   - Moteur : Unity
   - Jouabilité : Casque de Réalité Virtuelle
-  - Développement & compétences acquises : Développement VR, gestion des animateurs de personnages, travail en équipe avec Git (collaboration), système d'interactions, storytelling.
+
+infos: |
+ Développement & compétences acquises : Développement VR, gestion des animateurs de personnages, travail en équipe avec Git (collaboration), système d'interactions, storytelling.
+
 images:
   - /assets/images/mllepitch/grp1.jpg
   - /assets/images/mllepitch/grp2.jpg

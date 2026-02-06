@@ -3,34 +3,29 @@ title: "Woogus"
 layout: project
 permalink: /projects/Woogus/
 published: true
-date: 2022-09-01 12:00:00
-description: "Jeu vidéo réalisé en équipe de 3. Jeu d'aventure, d'énigme et de combat."
+date: 2023-02-01 12:00:00
+description: "Emission Twitch en direct sur le jeu 'Loup Garou'"
 context: |
-  Jeu vidéo réalisé dans le cadre de cours sur pour apprendre Unity, enseigné par Alain Cardona, en première année de formation Ingénieur en Informatique et Multimdédia au Cnam PACA.
-histoire: |
-  Suite à une invasion étrangère, la planète Elysion subit de gros dégâts. Une seule personne arrive à survivre et on la retrouve 15 ans plus tard. Vous incarnez un personnage soif de vengeance qui va explorer, combattre et résoudre des énigmes avec un concept inédit : déplacer et orienter les structures qui vous entourent pour vous frayer un chemin vers la vérité.
+  Emission Twitch sur le jeu 'Loup Garou' réalisée en Equipe sur un plateau télé avec diffusion en direct pour le cours de transmission multimédia. Réalisé avec Unreal Engine, le système permet de lier un environnement 3D à un monde réel...
+
 notes: |
-  - Moteur : Unity
-  - Jouabilité : Clavier / Souris
-  - Développement & compétences acquises : Level Design (outil Landscape), gestion des animateurs de personnages, travail en équipe avec Git (collaboration), système d'énigme/puzzle avec matrices, cinématiques, storytelling.
+  - Moteur : Unreal Engine 4 avec Aximetry
+  - Plateau : Salle Télomédia à l'Université de Toulon équipée de Caméra, fond verts, éclairage...
 
 
-infos : |
- Ceci est des infos supplémentaires sur le déroulé etc.   - Jouabilité : Clavier / Souris
-  - Développement & compétences acquises : Level Design (outil Landscape), gestion des animateurs de personnages, travail en équipe avec Git (collaboration), système d'énigme/puzzle avec matrices, cinématiques, storytelling.
+infos : ""
+  
 
 
 projectTileBgImg: /assets/images/woogus/woogus-low.png
 images:
-  - /assets/images/elysion/1.png
-  - /assets/images/elysion/2.png
-  - /assets/images/elysion/10.png
+  - ""
+
+
 videos:
   - https://www.youtube.com/watch?v=qaCSMvxSkWo
-projectVideoUrl :  /assets/videos/elysion1.mp4
+projectVideoUrl : ""
 credits:
-  - "Équipe"
   - "Logan DE JESUS — Développeur, Game Designer, Level Designer"
-  - "Maëlis RAKOWSKI - Développeur, Chef de projet, Scénariste"
-  - "Nellou MICHEL - Développeur, 3D Artist"
+
 ---

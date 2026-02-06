@@ -13,7 +13,7 @@ notes: |
   - Moteur : Unity
   - Jouabilité : Réalité Virtuelle
   - Développement & compétences acquises : Développement VR, Travail en équipe avec 3D artist, Relation client, Comprendre les besoins .
-projectTileBgImg: /assets/images/extrudicc/IMG-20260122-WA0000.jpg
+projectTileBgImg: https://img.youtube.com/vi/nFq0ki0XbgM/sddefault.jpg
 images:
   - /assets/images/extrudicc/IMG-20260122-WA0000.jpg
   - /assets/images/extrudicc/IMG_2637.jpg

@@ -22,7 +22,8 @@ published: true
     
     {% if projects.size > 0 %}
       {% for project in projects %}
-        <div class="projectTile" {% if cat_key == "professionnel" %}id="professionnel"{% endif %} style="--bg-img: url('{{ site.baseurl }}{{ project.projectTileBgImg }}');">
+      <div class="projectTile" {% if cat_key == "professionnel" %}id="professionnel"{% endif %} style="--bg-img: url('{{ project.projectTileBgImg | relative_url }}');">
+
           {% if project.redirect %}
               {% assign link = project.redirect %}
             {% else %}
