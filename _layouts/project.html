@@ -93,7 +93,7 @@ layout: default
 
 <aside>
 
-  <section>
+  <section class="boxshadow">
     <div>
     <h2>Contexte</h2>
     <div>{{ page.context | markdownify }}</div>
@@ -101,7 +101,7 @@ layout: default
   </section>
 
   {% if page.notes %}
-  <section>
+  <section class="boxshadow">
     <div>
     <h2>Notes techniques</h2>
     <div>{{ page.notes | markdownify }}</div>
@@ -110,7 +110,7 @@ layout: default
   {% endif %}
 
   {% if page.credits %}
-  <section>
+  <section class="boxshadow">
     <div>
     <h2>Crédits</h2>
     <ul>

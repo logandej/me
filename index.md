@@ -9,15 +9,15 @@ published: true
 
 
 <div class="bandeau">
-  <img class="bandeau__avatar" src="{{ page.profile.image | prepend: '/assets/images/' | relative_url }}">
-  <i>Site Web en construction</i>
+  <img class="bandeau__avatar boxshadow" src="{{ page.profile.image | prepend: '/assets/images/' | relative_url }}">
+  <!-- <i>Site Web en construction</i> -->
 
-  <div class="section-item">
-    <h1 class="bandeau-name">{{ site.name | default: "Logan De Jesus" }}</h1>
-    <div class="bandeau-desc">{{ site.description | default: "pb" }}</div>
+  <div class="section-item boxshadow">
+    <!-- <h1 class="bandeau-name">{{ site.name | default: "Logan De Jesus" }}</h1> -->
+    <!-- <div class="bandeau-desc">{{ site.description | default: "pb" }}</div> -->
 
     <p class="bandeau-intro">
-      Je m'appelle {{ site.name | default: "Logan" }}. Après avoir passé <strong>2 ans d'IUT à Montpellier</strong> et <strong>3 ans de formation au CNAM en ingénieur informatique et multimédia à Toulon</strong>, je suis maintenant diplômé et je suis devenu professionnel dans la création de jeux vidéo, notamment en réalité virtuelle.
+       Bonjour, après avoir passé <strong>2 ans d'IUT à Montpellier</strong> et <strong>3 ans de formation au CNAM en ingénieur informatique et multimédia à Toulon</strong>, je suis maintenant diplômé et je suis devenu professionnel dans la création de jeux vidéo, notamment en réalité virtuelle.
     </p>
 
     <ul class="bandeau-icons" aria-label="Icônes de profil">
@@ -34,7 +34,7 @@ published: true
 
 </div>
 
-<section class="section-item">
+<section class="section-item boxshadow">
 	<h2>Mon Histoire</h2>
 		<div>
 			<ul>
@@ -46,7 +46,7 @@ published: true
 		</div>
 </section>
 
-<section class="section-item">
+<section class="section-item boxshadow">
 	<h2>Compétences Techniques</h2>
 		<div>
 			<ul>
@@ -59,7 +59,7 @@ published: true
 </section>
 
 
-<section class="section-item">
+<section class="section-item boxshadow">
 	<h2>Infos Rapides</h2>
 		<div>
 			<ul>
@@ -70,7 +70,7 @@ published: true
 		</div>
 </section>
 
-<section class="section-item">
+<section class="section-item boxshadow">
 <h2> Projets & Contact </h2>
 <p>Parcourez la section <a href="{{site.baseurl}}/Projects"> Projets </a> pour voir mes réalisations, et le <a href="{{site.baseurl}}/blogs">Blog</a> pour mes notes techniques et post-mortems. Si vous souhaitez me contacter ou collaborer, utilisez les liens en bas de page.</p>
 </section>

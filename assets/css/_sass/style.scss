@@ -28,6 +28,16 @@ body {
   }
 }
 
+.bg-diffuse {
+  /* Fond noir pur avec un cercle éclairé au centre */
+  background: radial-gradient(circle at center, #41335c 0%, #000000 50%);
+  
+  /* S'assure que le fond prend toute la page */
+  
+  background-attachment: fixed;
+
+}
+
 h1,h2,h3,h4,h5,h6 {
   font-family: "Lato", "Helvetica Neue", Helvetica, sans-serif;
   font-weight: bold;
@@ -37,45 +47,45 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 
+/* CSS */
 a {
-  color: $projectbox-text;
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid $secondary-color;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: $text-color;
+  cursor: pointer;
+  display: inline-block;
+
+  line-height: normal;
+
+  outline: none;
+  padding: 10px 20px;
+  text-align: center;
   text-decoration: none;
-  &:hover{
-    color: $text-color;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 
-    @media (prefers-color-scheme: dark) {
-      color: $text-color-dark;
-    }
-
-  }
+  will-change: transform;
 }
 
+a:disabled {
+  pointer-events: none;
+}
 
+a:hover {
+  color: #fff;
+  background-color: $secondary-color;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  //transform: translateY(2px);
+}
 
-p a {
-  color: $text-color;
-  text-decoration: none;
-  background: -webkit-linear-gradient(transparent 90%, lighten($brand-color, 10%) 10%);
-  background: -moz-linear-gradient(transparent 90%, lighten($brand-color, 10%) 10%);
-  background: linear-gradient(transparent 90%, lighten($brand-color, 10%) 10%);
-
-  -webkit-box-shadow: inset 0 0 0 0 lighten($brand-color, 10%);
-  box-shadow: inset 0 0 0 0 lighten($brand-color, 10%);
-
-
-  -webkit-transition: box-shadow ease 1s;
-  -moz-transition: box-shadow ease 1s;
-  transition: box-shadow ease 1s;
-  &:hover {
-    color: lighten($background-color, 50%);
-    -webkit-box-shadow: inset 0 -100px 0 0 lighten($brand-color, 10%);
-    box-shadow: inset 0 -100px 0 0 lighten($brand-color, 10%);
-
-  }
-
-  @media (prefers-color-scheme: dark) {
-    color: $text-color-dark;
-  }
+a:active {
+  box-shadow: none;
+  transform: translateY(0);
 }
 
 
@@ -228,6 +238,8 @@ aside section {
   //box-shadow: 0 12px 40px rgba(0,0,0,0.45);
   //backdrop-filter: blur(8px);
   text-align: left;
+
+
 }
 
 aside section h2{
@@ -240,6 +252,7 @@ aside section h2{
   display: flex;
   flex-direction: column;
   width: 90%;
+
 }
 
 .article-item h2{
@@ -249,27 +262,60 @@ aside section h2{
 
 /* cadre central flouté */
 .section-item {
-  position: relative;
+position: relative;
   width: 80%;
-  background: $brand-color;
+  margin: 2rem auto; /* Combiné pour plus de clarté */
   padding: 2.2rem;
-  border-radius: 50px;
-  box-shadow: 0 12px 40px rgba(0,0,0,0.45);
-  //backdrop-filter: blur(8px);
+
+  background: linear-gradient(
+    150deg, 
+    #2d243e 0%, 
+
+    #0f0f0f 100%
+  );
+  
+  // Arrondi : 50px c'est très rond (pilule), 24px-32px fait souvent plus "UI pro"
+  border-radius: 40px; 
   color: $text-color;
-  text-align: left;
-  margin: auto;
-  margin-bottom: 2rem;
+}
+
+.section-item :is(h1, h2){
+  margin-top: 0;
+  text-align: center;
+}
+
+.boxshadow {
+ // Fond : On utilise une légère transparence pour le côté moderne
+  //background: rgba($brand-color, 0.9); 
+  
+  // Bordure : Très fine et semi-transparente pour capter la lumière
+  //border: 2px solid rgb(58, 58, 58);
+
+   // L'ombre "Glow" : On superpose une ombre portée et une lueur
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.4),            /* Ombre portée pour la profondeur */
+    0 0 25px rgba(116, 83, 168, 0.6);         /* Lueur diffuse de ta couleur violette */
+
+  // On réactive le blur pour l'effet premium
+  backdrop-filter: blur(2px); 
+
+    // Petit bonus : une bordure subtile en haut pour simuler un reflet
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   top: 0; left: 10%; right: 10%; height: 2px;
+  //   background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  // }
 }
 
 .bandeau {
-  min-height: 90vh;
+  padding-top: 5rem;
   /* Chemin relatif depuis assets/css/style.css compilé vers assets/images/... */
   //background-image: url("../images/testback.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  overflow: hidden;
+  // background-size: cover;
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // overflow: hidden;
 
   /* full-bleed layout */
  
@@ -289,9 +335,7 @@ aside section h2{
     height: 120px;
     object-fit: cover;
     border-radius: 50%;
-    border: 0px solid rgba(255,255,255,0.95);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.45);
-    z-index: 3;
+
 
     @include media-query($on-palm) {
       width: 80px;
@@ -344,3 +388,30 @@ aside section h2{
   //background-color: rgba(0, 0, 0, 0.5);
 }
 
+
+//BACKGROUND DES PROJETS
+.city-silhouettes {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+   height: 100vh; /* La ville occupe le bas de l'écran */
+  background-image: url(../images/ville.svg);
+  background-position: bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.6; /* Pour un look minimaliste */
+  z-index: -1;
+  pointer-events: none; /* Pour pouvoir cliquer à travers sur tes liens */
+}
+
+.planet {
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle at 30% 30%, #5d4385, #000);
+  border-radius: 50%;
+  box-shadow: 0 0 40px rgba(116, 83, 168, 0.3);
+  position: fixed;
+  top: 10%;
+  right: 15%;
+}
