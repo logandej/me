@@ -26,6 +26,8 @@ infos : |
   - Organisation et Développement du Projet
   - Présenter l’avancement de l’application au client.
 
+notes-tags : [Unity, Réalité Virtuelle, Casque PICO 4 Ultra, Blender, Travail en équipe, Chef de Projet, Communication Clien, Lead Developer, Reaper, Piano Roland FP32]
+
 notes: |
 
   Infos techniques :

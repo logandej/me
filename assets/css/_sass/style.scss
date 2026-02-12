@@ -263,7 +263,7 @@ aside section h2{
 /* cadre central flouté */
 .section-item {
 position: relative;
-  width: 80%;
+  width: 70%;
   margin: 2rem auto; /* Combiné pour plus de clarté */
   padding: 2.2rem;
 
@@ -283,6 +283,33 @@ position: relative;
   margin-top: 0;
   text-align: center;
 }
+
+
+.notes-tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  //margin-top: 15px;
+}
+
+.note-tag {
+  padding: 15px;
+  //line-height: 20px; /* Aligne le texte au milieu des 50px */
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: transparent;
+  //border: 2px solid $secondary-color;
+  border-radius: 20px; /* Arrondi pour un look moderne */
+  //background: $secondary-color;
+  color: $text-color;
+  box-shadow: 0 0 5px $secondary-color; /* Légère lueur pour faire ressortir les tags */
+}
+
+
+
 
 .boxshadow {
  // Fond : On utilise une légère transparence pour le côté moderne
@@ -392,11 +419,11 @@ position: relative;
 //BACKGROUND DES PROJETS
 .city-silhouettes {
   position: fixed;
-  bottom: 0;
+  bottom: -20vh;
   left: 0;
   width: 100%;
-   height: 100vh; /* La ville occupe le bas de l'écran */
-  background-image: url(../images/ville.svg);
+   height: 100%; /* La ville occupe le bas de l'écran */
+  background-image: url(../images/trace.svg);
   background-position: bottom center;
   background-size: cover;
   background-repeat: no-repeat;

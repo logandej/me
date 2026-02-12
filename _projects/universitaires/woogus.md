@@ -8,9 +8,8 @@ description: "Emission Twitch en direct sur le jeu 'Loup Garou'"
 context: |
   Emission Twitch sur le jeu 'Loup Garou' réalisée en Equipe sur un plateau télé avec diffusion en direct pour le cours de transmission multimédia. Réalisé avec Unreal Engine, le système permet de lier un environnement 3D à un monde réel...
 
-notes: |
-  - Moteur : Unreal Engine 4 avec Aximetry
-  - Plateau : Salle Télomédia à l'Université de Toulon équipée de Caméra, fond verts, éclairage...
+notes-tags : [Unreal Engine 4, Aximmetry, Plateau, Fond verts, Camera, Tracking, Télomédia, Régie]
+
 
 
 infos : ""
@@ -18,8 +17,6 @@ infos : ""
 
 
 projectTileBgImg: /assets/images/woogus/woogus-low.png
-images:
-  - ""
 
 
 videos:

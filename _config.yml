@@ -92,3 +92,6 @@ plugins:
   - jekyll-email-protect
   - jekyll-target-blank
 
+Unity : 
+  icon: "assets/images/profilesicons/1logoUnity.png"
+

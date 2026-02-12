@@ -17,7 +17,7 @@ published: true
     <!-- <div class="bandeau-desc">{{ site.description | default: "pb" }}</div> -->
 
     <p class="bandeau-intro">
-       Bonjour, après avoir passé <strong>2 ans d'IUT à Montpellier</strong> et <strong>3 ans de formation au CNAM en ingénieur informatique et multimédia à Toulon</strong>, je suis maintenant diplômé et je suis devenu professionnel dans la création de jeux vidéo, notamment en réalité virtuelle.
+       Bonjour, après avoir passé <strong>2 ans d'IUT à Montpellier</strong> et <strong>3 ans de formation au CNAM en ingénieur informatique et multimédia à Toulon</strong>, je suis maintenant diplômé et je suis devenu professionnel dans la création de jeux vidéo, Chef de projet et Lead Developper notamment en réalité virtuelle.
     </p>
 
     <ul class="bandeau-icons" aria-label="Icônes de profil">
@@ -36,14 +36,34 @@ published: true
 
 <section class="section-item boxshadow">
 	<h2>Mon Histoire</h2>
-		<div>
-			<ul>
-			<li>2025 — Diplômé, CDD 6 Mois au CNAM en tant qu'ingénieur développeur et Chef de projet XR</li>
-			<li>2022–2025 — Formation d'ingénieur au CNAM en alternance (informatique & multimédia)</li>
-			<li>2020–2022 — Études à l'IUT de Montpellier (informatique)</li>
-		</ul>
-		<p>J'aime concevoir des expériences immersives, prototyper rapidement et travailler en équipe pour mener un projet de l'idée au produit fini.</p>
-		</div>
+		<div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="year">2025</div>
+                    <div class="role">Diplômé, CDD 5 Mois au CNAM</div>
+                    <div class="institution">Ingénieur développeur et Chef de projet XR</div>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="year">2022–2025</div>
+                    <div class="role">Formation d'ingénieur au CNAM</div>
+                    <div class="institution">Ingénieur Informatique & multimédia en alternance</div>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="year">2020–2022</div>
+                    <div class="role">Études à l'IUT de Montpellier</div>
+                    <div class="institution">DUT Informatique</div>
+                </div>
+            </div>
+			</div>
 </section>
 
 <section class="section-item boxshadow">
@@ -66,12 +86,13 @@ published: true
 			<li>Localisation : Montpellier, Toulon, où je veux !</li>
 			<li>Domaines : Jeux vidéo, Réalité virtuelle</li>
 			<li>Statut : Disponible pour collaborations et missions</li>
+			<li><a href="{{site.baseurl}}/assets/cv-dejesus-logan.pdf">Télécharger mon CV</a> </li>
 		</ul>
 		</div>
 </section>
 
 <section class="section-item boxshadow">
 <h2> Projets & Contact </h2>
-<p>Parcourez la section <a href="{{site.baseurl}}/Projects"> Projets </a> pour voir mes réalisations, et le <a href="{{site.baseurl}}/blogs">Blog</a> pour mes notes techniques et post-mortems. Si vous souhaitez me contacter ou collaborer, utilisez les liens en bas de page.</p>
+<p>Parcourez la section <a href="{{site.baseurl}}/Projects"> Projets </a> pour voir mes réalisations. Si vous souhaitez me contacter ou collaborer, utilisez les liens en bas de page.</p>
 </section>
 
