@@ -1,0 +1,39 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax slice">
+  <defs>
+    <linearGradient id="buildingGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1A1A2E" />
+      <stop offset="100%" stop-color="#0F0C29" />
+    </linearGradient>
+    <filter id="neonGlow">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur" />
+      <feFlood flood-color="#00FFFF" flood-opacity="0.7" result="glowColor" />
+      <feComposite in="glowColor" in2="blur" operator="in" result="glow" />
+      <feMerge>
+        <feMergeNode in="glow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+
+  <line x1="0" y1="600" x2="500" y2="400" stroke="#0C0C1F" stroke-width="1" />
+  <line x1="1200" y1="600" x2="700" y2="400" stroke="#0C0C1F" stroke-width="1" />
+  <line x1="0" y1="550" x2="500" y2="400" stroke="#0C0C1F" stroke-width="1" />
+  <line x1="1200" y1="550" x2="700" y2="400" stroke="#0C0C1F" stroke-width="1" />
+  
+  <path d="M0 600 V300 L150 250 L150 600 Z" fill="url(#buildingGradient)" stroke="#2C2C4A" stroke-width="1" />
+  <path d="M100 600 V350 L250 300 L250 600 Z" fill="url(#buildingGradient)" stroke="#2C2C4A" stroke-width="1" />
+  <path d="M200 600 V400 L350 350 L350 600 Z" fill="url(#buildingGradient)" stroke="#2C2C4A" stroke-width="1" />
+
+  <path d="M1200 600 V300 L1050 250 L1050 600 Z" fill="url(#buildingGradient)" stroke="#2C2C4A" stroke-width="1" />
+  <path d="M1100 600 V350 L950 300 L950 600 Z" fill="url(#buildingGradient)" stroke="#2C2C4A" stroke-width="1" />
+  <path d="M1000 600 V400 L850 350 L850 600 Z" fill="url(#buildingGradient)" stroke="#2C2C4A" stroke-width="1" />
+
+  <rect x="10" y="380" width="20" height="40" fill="#00FFFF" filter="url(#neonGlow)" />
+  <rect x="50" y="450" width="30" height="15" fill="#FF00FF" filter="url(#neonGlow)" />
+  <rect x="120" y="320" width="15" height="60" fill="#00FFFF" filter="url(#neonGlow)" />
+  <rect x="1170" y="380" width="20" height="40" fill="#FF00FF" filter="url(#neonGlow)" />
+  <rect x="1120" y="450" width="30" height="15" fill="#00FFFF" filter="url(#neonGlow)" />
+  <rect x="1080" y="320" width="15" height="60" fill="#FF00FF" filter="url(#neonGlow)" />
+
+</svg>
