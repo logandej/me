@@ -27,10 +27,11 @@ layout: default
   
 <div class="project-content">
 <article>
-
+<h6>Présentation</h6>
 {% assign all_media = page.videos %}{% if page.images %}{% assign all_media = all_media | concat: page.images %}{% endif %}
 {% if all_media.size > 0 %}
-<section class="project-gallery">  
+<section class="project-gallery"> 
+  <h6>Galerie</h6>
   <div class="project-carousel" id="carousel" role="region" aria-label="Galerie multimédia">
     <div class="row">
       <button class="carousel-btn prev" aria-label="Média précédent" aria-controls="carousel-track">‹</button>
@@ -41,7 +42,7 @@ layout: default
             <li class="carousel-slide{% if forloop.first and page.videos %} active{% endif %}" data-index="{{ forloop.index0 }}" role="group" aria-label="Vidéo {{ forloop.index }}">
               <div class="video-wrapper">
                 {% assign embed = video | replace: 'watch?v=', 'embed/' %}
-                <iframe src="{{ embed }}" frameborder="0" allowfullscreen></iframe>
+                <iframe src="{{ embed }}" allowfullscreen></iframe>
               </div>
             </li>
             {% endfor %}
@@ -59,7 +60,7 @@ layout: default
       </div>
       <button class="carousel-btn next" aria-label="Média suivant" aria-controls="carousel-track">›</button>
     </div>
-    <div class="carousel-indicators" role="tablist">
+    <div class="carousel-indicators" role="tabpanel">
       {% assign total_media = page.videos.size | plus: page.images.size %}
       {% for i in (1..total_media) %}
       <button class="indicator{% if forloop.first %} active{% endif %}" data-index="{{ forloop.index0 }}" role="tab" aria-label="Aller au média {{ forloop.index }}" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"></button>
