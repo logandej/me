@@ -15,11 +15,9 @@ published: true
   <div class="section-item boxshadow">
     <!-- <h1 class="bandeau-name">{{ site.name | default: "Logan De Jesus" }}</h1> -->
     <!-- <div class="bandeau-desc">{{ site.description | default: "pb" }}</div> -->
-
     <p class="bandeau-intro">
-       Bonjour, après avoir passé <strong>2 ans d'IUT à Montpellier</strong> et <strong>3 ans de formation au CNAM en ingénieur informatique et multimédia à Toulon</strong>, je suis maintenant diplômé et je suis devenu professionnel dans la création de jeux vidéo, Chef de projet et Lead Developper notamment en réalité virtuelle.
+       Bonjour, après avoir passé <strong>2 ans d'IUT à Montpellier</strong> et <strong>3 ans de formation au CNAM en ingénieur informatique et multimédia à Toulon</strong>, je suis maintenant diplômé et je suis devenu professionnel dans la création de jeux vidéo, Chef de projet et Lead Developer notamment en réalité virtuelle.
     </p>
-
     <ul class="bandeau-icons" aria-label="Icônes de profil">
       {% assign icons = site.static_files | where_exp: "f", "f.path contains 'assets/images/profileicons/'" | sort: "name" %}
       {% for icon in icons %}
@@ -27,9 +25,10 @@ published: true
             <img src="{{ icon.path | relative_url }}" alt="{{ icon.name }}" loading="lazy" />
         </li>
       {% endfor %}
-
     </ul>
-  </div>
+</div>
+
+
 
 
 </div>
@@ -43,13 +42,16 @@ published: true
                     <div class="year">2025</div>
                     <div class="role">Diplômé, CDD 5 Mois au CNAM</div>
                     <div class="institution">Ingénieur développeur et Chef de projet XR</div>
+                    <p>
+                        Après mon alternance, le service du Pôle Innovation du Cnam Paca m'a gardé pour un CDD. J'ai finalisé durant cette période l'application <a href="{{site.baseurl}}/projects/artreva/"><i>Artreva</i></a> après les retours utilisateurs du public de Toulon et d'Ollioules. J'ai participé à la conception de projets, comme sur la réalisation d'une salle immersive, ou sur la création d'un hologramme d'accueil pour visiteur. J'ai également donné des cours sur l'élaboration de ce projet ainsi que sur les processus de conception de jeux vidéos.
+                    </p>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-marker"></div>
                 <div class="timeline-content">
                     <div class="year">2022–2025</div>
-                    <div class="role">Formation d'ingénieur au CNAM (Conservatoir national des arts et métier)</div>
+                    <div class="role">Formation d'ingénieur au CNAM (Conservatoire national des arts et métier)</div>
                     <div class="institution">Ingénieur Informatique & multimédia en alternance</div>
 					<p> 
 					 	Après avoir réussi le concours d'admission du Cnam, je suis parti à Toulon pour les études sans avoir de logement ni d'entreprise d'apprentissage. Ce n'est qu'une fois sur place, le premier jour de classe, que j'ai été accepté en apprentissage par le service du pôle innovation du Cnam et ai trouvé un logement. Ce fut 3 années exceptionnelles, avec une promo hors du commun et riche en relation. Nous avons réalisés tellement de <a href="{{site.baseurl}}/projects"><i>Projets</i></a> innovants. Des concours :
@@ -101,8 +103,9 @@ published: true
 		</div>
 </section>
 
+
 <section class="section-item boxshadow">
-<h2> Projets & Contact </h2>
-<p>Parcourez la section <a href="{{site.baseurl}}/Projects"> Projets </a> pour voir mes réalisations. Si vous souhaitez me contacter ou collaborer, utilisez les liens en bas de page.</p>
+  <h2> Projets & Contact </h2>
+  <p>Parcourez la section <a href="{{site.baseurl}}/Projects"> Projets </a> pour voir mes réalisations. Si vous souhaitez me contacter ou collaborer, utilisez les liens en bas de page.</p>
 </section>
 
