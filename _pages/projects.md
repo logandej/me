@@ -20,7 +20,7 @@ published: true
     {% assign projects = site.projects | where: "categorie", cat_key | reverse %}
     {% if projects.size > 0 %}
       {% for project in projects %}
-      <div class="projectTile boxshadow" {% if cat_key == "professionnel" %}id="professionnel"{% endif %} style="--bg-img: url('{{ project.projectTileBgImg | relative_url }}');">
+      <div class="projectTile boxshadow"  style="--bg-img: url('{{ project.projectTileBgImg | relative_url }}');">
           {% if project.redirect %}
               {% assign link = project.redirect %}
             {% else %}
