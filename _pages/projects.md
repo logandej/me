@@ -17,24 +17,20 @@ published: true
   <div><h2>{{ cat_label }}</h2></div>
 
   <div class="gallery">
-    
     {% assign projects = site.projects | where: "categorie", cat_key | reverse %}
-    
     {% if projects.size > 0 %}
       {% for project in projects %}
       <div class="projectTile boxshadow" {% if cat_key == "professionnel" %}id="professionnel"{% endif %} style="--bg-img: url('{{ project.projectTileBgImg | relative_url }}');">
-
           {% if project.redirect %}
               {% assign link = project.redirect %}
             {% else %}
               {% assign link = project.url | prepend: site.baseurl | prepend: site.url %}
             {% endif %}
-
           <a href="{{ link }}" {% if project.redirect %}target="_blank"{% endif %}>
-            <span>
+            <div>
               <h2>{{ project.title }}</h2>
               <p>{{ project.description }}</p>
-            </span>
+            </div>
           </a>
         </div>
       {% endfor %}
