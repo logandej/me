@@ -2,7 +2,7 @@
 
 {%- if site.email -%}
 <a title="{{ _locale_string_email }}"
-class="social-button email" itemprop="email"
+class="social-button email" 
 href="mailto:{{ site.email | encode_email }}" target="_blank">
 <i class="far fa-envelope"></i>
 </a>
@@ -11,7 +11,7 @@ href="mailto:{{ site.email | encode_email }}" target="_blank">
 {%- if site.linkedin -%}
 <a title="{{ _locale_string_follow | replace: '[NAME]', 'LinkedIn' }}"
 class="social-button linkedin"
-href="https://www.linkedin.com/in/{{ site.linkedin }}" itemprop="sameAs"
+href="https://www.linkedin.com/in/{{ site.linkedin }}" 
 target="_blank">
 <i class="fab fa-linkedin"></i>
 </a>
@@ -20,7 +20,7 @@ target="_blank">
 {%- if site.github -%}
 <a title="{{ _locale_string_follow | replace: '[NAME]', 'GitHub' }}"
 class="social-button github"
-href="https://www.github.com/{{ site.github }}" itemprop="sameAs"
+href="https://www.github.com/{{ site.github }}" 
 target="_blank">
 <i class="fab fa-github"></i>
 </a>
@@ -29,7 +29,7 @@ target="_blank">
 {%- if site.researchgate -%}
 <a title="{{ _locale_string_follow | replace: '[NAME]', 'ResearchGate' }}"
 class="social-button researchgate"
-href="https://www.researchgate.net/profile/{{ site.researchgate }}" itemprop="sameAs"
+href="https://www.researchgate.net/profile/{{ site.researchgate }}" 
 target="_blank">
 <i class="fab fa-researchgate"></i>
 </a>
@@ -38,7 +38,7 @@ target="_blank">
 {%- if site.orcid -%}
 <a title="{{ _locale_string_follow | replace: '[NAME]', 'Orcid' }}"
 class="social-button orcid"
-href="https://orcid.org/{{ site.orcid }}" itemprop="sameAs"
+href="https://orcid.org/{{ site.orcid }}" 
 target="_blank">
 <i class="fab fa-orcid"></i>
 </a>
@@ -46,7 +46,7 @@ target="_blank">
 
 {%- if site.facebook -%}
 <a title="{{ _locale_string_follow | replace: '[NAME]', 'Facebook' }}"
-class="social-button facebook" itemprop="sameAs"
+class="social-button facebook" 
 href="https://www.facebook.com/{{ site.facebook }}"
 target="_blank">
 <i class="fab fa-facebook-f"></i>
@@ -55,7 +55,7 @@ target="_blank">
 
 {%- if site.bluesky -%}
 <a title="{{ _locale_string_follow | replace: '[NAME]', 'Bluesky' }}"
-class="social-button bluesky" itemprop="sameAs"
+class="social-button bluesky"
 href="https://bsky.app/profile/{{ site.bluesky }}"
 target="_blank">
 <i class="fab fa-bluesky"></i>
@@ -64,7 +64,7 @@ target="_blank">
 
 {%- if site.quora -%}
 <a title="{{ _locale_string_follow | replace: '[NAME]', 'Quora' }}"
-class="social-button quora" itemprop="sameAs"
+class="social-button quora" 
 href="https://www.quora.com/profile/{{ site.quora }}"
 target="_blank">
 <i class="fab fa-quora"></i>
@@ -73,7 +73,7 @@ target="_blank">
 
 {%- if site.instagram -%}
 <a title="{{ _locale_string_follow | replace: '[NAME]', 'Instagram' }}"
-class="social-button instagram" itemprop="sameAs"
+class="social-button instagram"
 href="https://www.instagram.com/{{ site.instagram }}"
 target="_blank">
 <i class="fab fa-instagram"></i>
@@ -82,7 +82,7 @@ target="_blank">
 
 {%- if site.stackoverflow -%}
 <a title="{{ _locale_string_follow | replace: '[NAME]', 'Stackoverflow' }}"
-class="social-button stackoverflow" itemprop="sameAs"
+class="social-button stackoverflow"
 href="https://stackoverflow.com/users/{{ site.stackoverflow }}"
 target="_blank">
 <i class="fab fa-brands fa-stack-overflow"></i>
@@ -91,7 +91,7 @@ target="_blank">
 
 {%- if site.itchio -%}
 <a title="{{ _locale_string_follow | replace: '[NAME]', 'Itchio' }}"
-class="social-button itchio" itemprop="sameAs"
+class="social-button itchio" 
 href="https://{{ site.itchio }}.itch.io"
 target="_blank">
 <i class="fab fa-itch-io"></i>
@@ -100,7 +100,7 @@ target="_blank">
 
 {%- if site.youtube -%}
 <a title="{{ _locale_string_follow | replace: '[NAME]', 'YouTube' }}"
-class="social-button youtube" itemprop="sameAs"
+class="social-button youtube"
 href="https://www.youtube.com/@{{ site.youtube }}"
 target="_blank">
 <i class="fab fa-youtube"></i>
