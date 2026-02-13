@@ -14,7 +14,7 @@ layout: default
   <!-- Overlay optionnel pour améliorer la lisibilité du texte -->
   <div class="header-overlay"></div>
     <div>
-    <h1>{{ page.title }}</h1>
+    <h2>{{ page.title }}</h2>
 
       <p class="project-meta"> {{ page.date | date: "%d %B %Y" }} — <em>{{ site.categories[page.categorie] }}</em></p>
     {% if page.description %}
@@ -31,7 +31,7 @@ layout: default
 {% assign all_media = page.videos %}{% if page.images %}{% assign all_media = all_media | concat: page.images %}{% endif %}
 {% if all_media.size > 0 %}
 <section class="project-gallery"> 
-  <h6>Galerie</h6>
+  <h2>Galerie</h2>
   <div class="project-carousel" id="carousel" role="region" aria-label="Galerie multimédia">
     <div class="row">
       <button class="carousel-btn prev" aria-label="Média précédent" aria-controls="carousel-track">‹</button>
@@ -60,10 +60,10 @@ layout: default
       </div>
       <button class="carousel-btn next" aria-label="Média suivant" aria-controls="carousel-track">›</button>
     </div>
-    <div class="carousel-indicators" role="tabpanel">
+    <div class="carousel-indicators" role="tablist">
       {% assign total_media = page.videos.size | plus: page.images.size %}
       {% for i in (1..total_media) %}
-      <button class="indicator{% if forloop.first %} active{% endif %}" data-index="{{ forloop.index0 }}" role="tab" aria-label="Aller au média {{ forloop.index }}" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"></button>
+      <button class="indicator{% if forloop.first %} active{% endif %}" data-index="{{ forloop.index0 }}" aria-label="Aller au média {{ forloop.index }}" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"></button>
       {% endfor %}
     </div>
   </div>
