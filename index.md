@@ -9,7 +9,7 @@ published: true
 
 
 <div class="bandeau">
-  <img class="bandeau__avatar boxshadow" src="{{ page.profile.image | prepend: '/assets/images/' | relative_url }}">
+  <img class="bandeau__avatar boxshadow" alt="profile picture" src="{{ page.profile.image | prepend: '/assets/images/' | relative_url }}">
   <!-- <i>Site Web en construction</i> -->
 
   <div class="section-item boxshadow">
@@ -22,7 +22,7 @@ published: true
       {% assign icons = site.static_files | where_exp: "f", "f.path contains 'assets/images/profileicons/'" | sort: "name" %}
       {% for icon in icons %}
         <li>
-            <img src="{{ icon.path | relative_url }}" alt="{{ icon.name }}" loading="lazy" />
+            <img src="{{ icon.path | relative_url }}" alt="{{ icon.name }}" loading="lazy">
         </li>
       {% endfor %}
     </ul>
